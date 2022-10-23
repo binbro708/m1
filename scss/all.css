@@ -68,7 +68,7 @@ img {
 
 body {
   max-width: 1903px;
-  height: 2000px;
+  margin: 0 auto;
   position: relative;
 }
 
@@ -76,7 +76,7 @@ a {
   text-decoration: none;
 }
 
-nav {
+.nav {
   width: 100%;
   position: fixed;
   height: 70px;
@@ -85,22 +85,29 @@ nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  display: none;
+  z-index: 9999;
+  top: -70px;
+  transition: all 0.3s linear;
 }
-nav .link-group {
+.nav .link-group {
   border-top: 1px solid white;
   border-bottom: 1px solid white;
   display: flex;
   padding: 8px 0;
+  z-index: 99999;
 }
-nav .link-group .link-group-btn {
+.nav .link-group .link-group-btn {
   color: white;
   font-size: 24px;
   margin-left: 27px;
   font-weight: bold;
 }
-nav .link-group .link-group-btn-end {
+.nav .link-group .link-group-btn-end {
   margin-right: 27px;
+}
+
+.nav.navOn {
+  top: 0;
 }
 
 .menu-fix-btn {
@@ -143,10 +150,24 @@ nav .link-group .link-group-btn-end {
   left: 224px;
 }
 .banner .logoBig .slogan {
-  background-color: #fff;
+  background-color: rgba(234, 232, 232, 0.5);
+  height: 358px;
+  width: 200px;
+  clip-path: polygon(0% 15%, 0 0, 15% 0%, 76% 0, 76% 15%, 100% 15%, 100% 85%, 100% 100%, 85% 100%, 23% 100%, 23% 86%, 0 86%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  right: -110px;
+  bottom: -305px;
+  writing-mode: vertical-lr;
+  color: #154058;
+  font-size: 40px;
+  font-weight: bold;
 }
 
 main .about {
+  width: 100%;
   margin-top: 150px;
   padding: 0 19.33% 0 17.47%;
   display: flex;
@@ -183,6 +204,18 @@ main .about .about-group .about-main .about-more-btn {
 main .about .about-group .about-main .about-more-btn p {
   color: #4a4a4a;
   font-size: 20px;
+}
+main .about .about-group .about-title-slash:before {
+  content: "";
+  position: absolute;
+  left: 48px;
+  bottom: 0;
+  width: 100%;
+  height: 50px;
+  box-sizing: border-box;
+  border-bottom: 3px solid #154058;
+  transform-origin: bottom center;
+  transform: rotateZ(-45deg) scale(0.8);
 }
 main .about .spilt-group {
   display: flex;
@@ -228,11 +261,24 @@ main .about .spilt-group .spilt-main .spilt-more-btn p {
   color: #4a4a4a;
   font-size: 20px;
 }
+main .about .spilt-group .spilt-title-slash:before {
+  content: "";
+  position: absolute;
+  left: 48px;
+  bottom: 0;
+  width: 98.29px;
+  height: 50px;
+  box-sizing: border-box;
+  border-bottom: 3px solid #154058;
+  transform-origin: bottom center;
+  transform: rotateZ(-45deg) scale(1);
+}
 main .about .about-all-title {
   color: #154058;
   font-size: 28px;
   font-weight: 400;
   white-space: nowrap;
+  position: relative;
 }
 main .about .about-all-slogan {
   font-size: 36px;
@@ -248,11 +294,12 @@ main .about .about-all-content {
 }
 main .about img {
   height: 430px;
-  width: 444px;
+  width: 80%;
   object-fit: cover;
 }
 
 .tea-type {
+  width: 100%;
   margin-top: 332px;
 }
 .tea-type img {
@@ -341,11 +388,54 @@ main .about img {
 }
 .news .news-main .news-main-card-group .news-main-card {
   margin-left: 30.72px;
+  position: relative;
+}
+.news .news-main .news-main-card-group .news-main-card .news-card-title {
+  display: flex;
+  align-items: center;
+  padding-top: 16px;
+  width: 17.7%;
+  height: 63%;
+  background-color: #154058;
+  writing-mode: vertical-lr;
+  position: absolute;
+  color: white;
+  font-size: 20px;
+  top: 8.9%;
+  left: 15%;
+}
+.news .news-main .news-main-card-group .news-main-card .news-card-title .news-card-date {
+  padding: 9px;
+  width: 40.99px;
+  height: 60.58px;
+  background-color: white;
+  position: absolute;
+  color: black;
+  writing-mode: horizontal-tb;
+  right: -20px;
+  bottom: -20px;
 }
 .news .news-title-group {
-  width: 219px;
+  width: 11.5%;
   height: 650px;
   background-color: #154058;
+  position: relative;
+}
+.news .news-title-group .news-title {
+  position: absolute;
+  left: 10%;
+  top: 68.6%;
+  color: white;
+  font-size: 28px;
+  writing-mode: vertical-lr;
+}
+.news .news-title-group .news-title-line:before {
+  content: "";
+  height: 100%;
+  width: 50px;
+  border-right: 3px solid white;
+  position: absolute;
+  left: 10px;
 }
 
 footer {

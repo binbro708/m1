@@ -5,15 +5,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>牧一春</title>
+    <link rel="icon" href="./img/favicon.ico">
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css' integrity='sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==' crossorigin='anonymous'/>
     <link rel="stylesheet" href="./scss/all.css" />
     
   </head>
   <body>
-    <nav>
+    <nav class="nav">
       <!-- TODO slogan方塊 -->
       <a href="index.html" class="logo-small"
-        ><img src="./img/logoSmall.png" alt="" /> ></a
+        ><img src="./img/logoSmall.png" alt="" /> </a
       >
       <ul class="link-group">
         <li class="link-group-btn">菜單</li>
@@ -32,7 +33,7 @@
       <div class="banner">
         <div class="logoBig">
           <img src="./img/logoBig.png" alt="" />
-          <div class="slogan"></div>
+          <div class="slogan">養茶的人</div>
         </div>
       </div>
     </header>
@@ -41,7 +42,7 @@
       <div class="about">
         <div class="about-group">
           <div class="about-title-group">
-            <h2 class="about-title about-all-title">關於我們</h2>
+            <h2 class="about-title about-all-title">關於我們<div class="about-title-slash"></div></h2>
             <p class="about-slogan about-all-slogan">喜歡，最純粹的那種。</p>
           </div>
           <div class="about-main">
@@ -58,7 +59,7 @@
         <!--  -->
         <div class="spilt-group">
           <div class="spilt-title-group">
-            <h2 class="spilt-title about-all-title">品牌精神</h2>
+            <h2 class="spilt-title about-all-title">品牌精神<div class="spilt-title-slash"></div></h2>
             <p class="spilt-slogan about-all-slogan">為茶飲找到最好的詮釋</p>
           </div>
           <div class="spilt-main">
@@ -114,31 +115,84 @@
       <div class="news">
         <div class="news-main">
           <div class="news-main-card-group">
-            <div class="news-main-card">
-              <img src="./img/newImg-1.png" alt="" />
-            </div>
-            <div class="news-main-card">
-              <img src="./img/newImg-2.png" alt="" />
-            </div>
-            <div class="news-main-card">
-              <img src="./img/newImg-3.png" alt="" />
-            </div>
+            <a href="#">
+              <div class="news-main-card">
+                <div class="news-card-title">
+                   缺貨公告
+                   <div class="news-card-date">
+                    <p>10.</p><p>14</p>
+                  </div>
+              </div>
+                <img src="./img/newImg-1.png" alt="" />
+              </div>
+            </a>
+            <a href="#">
+              <div class="news-main-card">
+                <div class="news-card-title">
+                   缺貨公告
+                   <div class="news-card-date">
+                    <p>10.</p><p>14</p>
+                  </div>
+              </div>
+                <img src="./img/newImg-2.png" alt="" />
+              </div>
+            </a>
+            <a href="#">
+              <div class="news-main-card">
+                <div class="news-card-title">
+                   缺貨公告
+                   <div class="news-card-date">
+                    <p>10.</p><p>14</p>
+                  </div>
+              </div>
+                <img src="./img/newImg-3.png" alt="" />
+              </div>
+            </a>
           </div>
           <div class="news-main-card-group card-group-second">
-            <div class="news-main-card">
-              <img src="./img/newImg-1.png" alt="" />
-            </div>
-            <div class="news-main-card">
-              <img src="./img/newImg-2.png" alt="" />
-            </div>
-            <div class="news-main-card">
-              <img src="./img/newImg-3.png" alt="" />
-            </div>
+            <a href="#">
+              <div class="news-main-card">
+                <div class="news-card-title">
+                   缺貨公告
+                   <div class="news-card-date">
+                    <p>10.</p><p>14</p>
+                  </div>
+              </div>
+                <img src="./img/newImg-1.png" alt="" />
+              </div>
+            </a>
+            <a href="#">
+              <div class="news-main-card">
+                <div class="news-card-title">
+                   缺貨公告
+                   <div class="news-card-date">
+                    <p>10.</p><p>14</p>
+                  </div>
+              </div>
+                <img src="./img/newImg-2.png" alt="" />
+              </div>
+            </a>
+            <a href="#">
+              <div class="news-main-card">
+                <div class="news-card-title">
+                   缺貨公告
+                   <div class="news-card-date">
+                    <p>10.</p><p>14</p>
+                  </div>
+              </div>
+                <img src="./img/newImg-3.png" alt="" />
+              </div>
+            </a>
           </div>
         </div>
         <!-- 把標題轉成block佔整條 然後畫邊框 動畫沒法做 -->
         <!-- 不然就是要分別畫讓他可以做動畫 -->
-        <div class="news-title-group"></div>
+        <div class="news-title-group">
+          <p class="news-title">最新消息</p>
+          <div class="news-title-line"></div>
+          <!-- TODO 等箭頭訂好要訂位 -->
+          <div class="news-arrow"></div>
+        </div>
       </div>
     </main>
     <footer>
@@ -160,6 +214,6 @@
         </div>
       </div>
     </footer>
-    <script src="all.js"></script>
+    <script src="./js/all.js"></script>
   </body>
 </html>
