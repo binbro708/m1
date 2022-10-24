@@ -76,6 +76,46 @@ a {
   text-decoration: none;
 }
 
+@keyframes logoIn {
+  0% {
+    opacity: 0;
+    top: -575px;
+  }
+  100% {
+    opacity: 1;
+    top: 53px;
+  }
+}
+@keyframes logoOut {
+  0% {
+    /* opacity: 1; */
+    top: 53px;
+  }
+  100% {
+    /* opacity: 0; */
+    top: -625px;
+  }
+}
+@keyframes sloganIn {
+  0% {
+    opacity: 0;
+    top: -575px;
+  }
+  100% {
+    opacity: 1;
+    top: 375px;
+  }
+}
+@keyframes sloganOut {
+  0% {
+    /* opacity: 1; */
+    top: 375px;
+  }
+  100% {
+    /* opacity: 0; */
+    top: -625px;
+  }
+}
 .nav {
   width: 100%;
   position: fixed;
@@ -146,10 +186,14 @@ a {
   align-items: center;
   justify-content: center;
   position: absolute;
-  top: 53px;
   left: 224px;
+  animation: logoIn 2s ease-in both;
 }
-.banner .logoBig .slogan {
+.banner .logoBig.logoOut {
+  animation: logoOut 2s ease-in both;
+  animation-delay: 1.3s;
+}
+.banner .slogan {
   background-color: rgba(234, 232, 232, 0.5);
   height: 358px;
   width: 200px;
@@ -158,12 +202,17 @@ a {
   justify-content: center;
   align-items: center;
   position: absolute;
-  right: -110px;
-  bottom: -305px;
+  left: 350px;
+  top: 375px;
   writing-mode: vertical-lr;
   color: #154058;
   font-size: 40px;
   font-weight: bold;
+  animation: sloganIn 2s ease-in both;
+  animation-delay: 1.3s;
+}
+.banner .slogan.sloganOut {
+  animation: sloganOut 2s ease-in both;
 }
 
 main .about {
