@@ -163,6 +163,7 @@ a {
   bottom: 87px;
   right: 76px;
   z-index: 999;
+  border: 1px solid white;
 }
 .menu-fix-btn .menu-btn-text {
   font-size: 32px;
