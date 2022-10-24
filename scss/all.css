@@ -123,6 +123,7 @@ a {
   bottom: 87px;
   right: 76px;
   z-index: 999;
+  border: 1px solid white;
 }
 .menu-fix-btn .menu-btn-text {
   font-size: 32px;
@@ -146,8 +147,9 @@ a {
   align-items: center;
   justify-content: center;
   position: absolute;
-  top: 53px;
+  top: -700px;
   left: 224px;
+  transition: all 1s linear;
 }
 .banner .logoBig .slogan {
   background-color: rgba(234, 232, 232, 0.5);
@@ -164,6 +166,9 @@ a {
   color: #154058;
   font-size: 40px;
   font-weight: bold;
+}
+.banner .logoBig.logoBigOn {
+  top: 53px;
 }
 
 main .about {
